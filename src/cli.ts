@@ -85,6 +85,12 @@ export const cliOptions = {
     conflicts: ['browserUrl', 'wsEndpoint'],
     alias: 'e',
   },
+  userDataDir: {
+    type: 'string',
+    description:
+      'Path to a custom user data directory for Chrome. If not specified, uses a default directory in ~/.cache/chrome-devtools-mcp/. Only applies when Chrome is launched by chrome-devtools-mcp.',
+    conflicts: ['browserUrl', 'wsEndpoint', 'isolated'],
+  },
   isolated: {
     type: 'boolean',
     description:
